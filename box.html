@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>盒子模型&定位</title>
+		<style type="text/css">
+			.box {
+				margin: 0;
+				padding: 0;
+			}
+			.content {
+				width: 100px;
+				height: 200px;
+				background: #666666;
+				/*border: solid 50px #777777;*/
+				/*padding: 10px;*/
+				margin: 10px;
+			}
+			.inner-box {
+				margin: 10px;
+				background: #aaaaaa;
+				height: 80px;
+			}
+			.span1 {
+				font-size: 30px;
+				margin: 10px;
+				padding: 20px;
+				border:dashed 10px #777777;
+			}
+			.inline-elements {
+				margin-top: 40px;
+			}
+			.span2 {
+				display: inline-block;
+				height: 50px;
+			}
+			.span3 {
+				height: 50px;
+			}
+			.span4 {
+				display: block;
+				height: 100px;
+			}
+
+			.span7 {
+				position: relative;
+				left: 20px;
+				top: 5px;
+			}
+			.relative-content {
+				background: lightblue;
+				margin: 10px;
+			}
+
+			.span10 {
+				position: absolute;
+				top: 20px;
+				left: 20px;
+			}
+			.absolute-content {
+				position: relative;
+				margin-top: 10px;
+				background: pink;
+			}
+			#branding {
+				margin-top:30px;
+				width: 70em;
+				height: 10em;
+				position: relative;
+				background: purple;
+			}
+			#branding .tel {
+				position: absolute;
+				right: 1em;
+				bottom: 1em;
+				text-align: right;
+			}
+
+			.float-content {
+				margin-left: 50px;
+				width: 400px;
+				height: 100px;
+			}
+			.float1 {
+				float: left;
+				background: red;
+				/*width: 100px;
+				height: 20px;*/
+				/*margin: 5px;*/
+			}
+			.float2 {
+				background: yellow;
+				width: 100px;
+				height: 20px;
+			}
+			.float3 {
+				background: green;
+				/*width: 100px;
+				height: 20px;*/
+			}
+			/*.float-span1 {
+				float: left;
+			}*/
+			.news {
+				margin-top:10px;
+				border: 1px solid red;
+			}
+			.news img {
+				float: left;
+			}
+			/*.news p {
+				float: right;
+			}*/
+		</style>
+	</head>
+	<body>
+		<!-- 盒子模型初探 -->
+		<div class="box">
+			<div class="content">
+				<div class="inner-box">
+					123456
+				</div>
+				<div class="inner-box">
+					4546456
+				</div>
+			</div>
+		</div>
+		<!-- 行内元素 -->
+		<div class="inline-elements">
+			some text start
+
+			<span class="span1">span1</span>
+			<span class="span2">span2</span>
+			<span class="span3">span3</span>
+			<span class="span4">span4</span>
+			<span class="span5">span5</span>
+
+			some text end
+		</div>
+		<!-- relative 相对定位初探 -->
+		<div class="relative-content">
+			<span class="span6">span6</span>
+			<span class="span7">span7</span>
+			<span class="span8">span8</span>
+		</div>
+		<!-- absolute 绝对定位初探 -->
+		<div class="absolute-content">
+			<span class="span9">span9</span>
+			<span class="span10">span10</span>
+			<span class="span11">span11</span>
+		</div>
+		<div id="branding">
+			<p class="tel">Tel: 0845 838 6163</p>
+		</div>
+		<!-- 浮动 -->
+		<div class="float-content">
+			<div class="float1">float_block1</div>
+			<!-- 如果内部有文本，元素会在浮动的后面，是内部的文档流出空间给浮动的元素 -->
+			<!-- 如果里面没有内容，则元素会像float1不存在一样 -->
+			<div class="float2"></div>
+			<div class="float3">float_block3</div>
+		</div>
+		<div class="float-content1">
+			<span class="float-span1">float-span1</span>
+			<span class="float-span2"></span>
+			<!-- <span class="float-span3">float-span3</span> -->
+		</div>
+		<div class="news">
+			<img src="http://img0.imgtn.bdimg.com/it/u=3411141434,868215358&fm=11&gp=0.jpg"/>
+			<p>sdlfsdfsdjfsfdsfsdflsfjdsfdlnvkcnvxcvnsldjfwefsjdjfsldmzxmcvnncvlsjdfsjdfiewjfsd,zxn</p>
+			<div style="clear: both"></div>
+			<p>sdlfsdfsdjfsfdsfsdflsfjdsfdlnvkcnvxcvnsldjfwefsjdjfsldmzxmcvnncvlsjdfsjdfiewjfsd,zxn</p>
+		</div>
+	</body>
+</html>
